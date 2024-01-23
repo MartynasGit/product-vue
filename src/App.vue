@@ -1,14 +1,15 @@
 <template>
-  <div class="container">
-    <nav>
-      <router-link  to="/">Home</router-link>
-      <router-link to="/feed">Uzsakymai</router-link>
-      <router-link to="/register">Registruotis</router-link>
-      <router-link to="/sign-in">Prisijungti</router-link>
-      <button @click="handleSignOut" v-if="isLoggedIn">Atsijungti</button>
-    </nav>
-    <router-view />
-
+  <div>
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <nav class="bg-gray-400">
+        <router-link to="/">Home</router-link>
+        <router-link to="/feed">Uzsakymai</router-link>
+        <router-link to="/register">Registruotis</router-link>
+        <router-link to="/sign-in">Prisijungti</router-link>
+        <button @click="handleSignOut" v-if="isLoggedIn">Atsijungti</button>
+      </nav>
+      <router-view />
+    </div>
   </div>
 </template>
 
